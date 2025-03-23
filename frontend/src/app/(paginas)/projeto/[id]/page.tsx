@@ -6,6 +6,8 @@ import Tecnologias from "@/components/tecnologias/tecnologias"
 import { obterReadme } from "@/functions/github"
 import { obterProjeto } from "@/functions/projetos"
 
+// export const revalidate = 3600
+
 export default async function PaginaProjeto(props: { params: Promise<{ id: string }> }) {
 	const { id } = await props.params
 	const projeto = await obterProjeto(id)
